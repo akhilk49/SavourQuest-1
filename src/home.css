@@ -17,8 +17,10 @@ header {
 }
 
 #logo {
-    width: 180px;
-    height: 203px;
+    position: absolute;
+    left: 2vw;
+    width: 12vw;
+    height: 20vh;
     background-image: url(../img/logo.png);
     background-size: cover;
     cursor: pointer;
@@ -136,7 +138,7 @@ header {
     display: grid;
     grid-template-columns: repeat(4, minmax(300px,1fr));
     grid-gap: 40px;
-    width: 80%;
+    width: 80vw;
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 10px;
