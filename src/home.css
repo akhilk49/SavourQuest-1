@@ -133,7 +133,7 @@ header {
 .recipe-container{
     position: absolute;
     top: 90vh;
-    left: 5vw;
+    left: 6vw;
     text-align: center;
     display: grid;
     grid-template-columns: repeat(4, minmax(300px,1fr));
@@ -141,7 +141,7 @@ header {
     width: 80vw;
     margin-top: 10px;
     margin-bottom: 10px;
-    padding: 10px;
+    /* padding: 10px; */
     place-items: center;
 }
 .recipe{

@@ -21,6 +21,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   specialContainer.onclick = openModal;
 
+
+  // Random Meal Fetching
   fetch("https://www.themealdb.com/api/json/v1/1/random.php")
     .then(response => response.json())
     .then(data => {
@@ -113,7 +115,7 @@ document.getElementById("logo").addEventListener("click", function() {
 
 
 
-
+// Searched Meal Fetching
 const searchBox =document.querySelector('.searchBox');
 const searchBtn =document.querySelector('.searchBtn');
 const recipeDetailsContent =document.querySelector('.recipe-details-content');
