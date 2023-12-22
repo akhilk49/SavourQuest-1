@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       specialContainer.innerHTML = `<img src="${mealImageURL}" alt="Special Meal">`;
 
-      specialContainer.style.height = "40vh";
+      specialContainer.style.height = "45vh";
       specialContainer.style.width = "40vw";
 
       const mealImage = specialContainer.querySelector("img");
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <h4 style="color: #0000000; font-size: 18px; margin: 10px;">Ingredients:</h4>
         <ul style="list-style-type: disc; margin-left: 25px; color: #0000000;">${ingredients}</ul>
         <h4 style="color: #0000000; font-size: 18px; margin-left: 10px; margin-top: 10px; margin-bottom: 10px;">Instructions:</h4>
-        <p style="color: #0000000; font-size: 16px; margin-left: 10px">${instructions}</p>
+        <p style="color: #0000000; font-size: 16px; margin-left: 10px; margin-bottom: 10px;">${instructions}</p>
       `;
     })
     .catch(error => {
@@ -177,10 +177,10 @@ const openRecipePopup = (meal) => {
       </div>     
   `
   recipeDetailsContent.parentElement.style.display = "block";
-  backdrop.style.display = "block"; // Add this line to display the backdrop
+  backdrop.style.display = "block"; 
   backdrop.onclick = () => {
     recipeDetailsContent.parentElement.style.display = "none";
-    backdrop.style.display = "none"; // Add this line to hide the backdrop
+    backdrop.style.display = "none"; 
   };
 }
 

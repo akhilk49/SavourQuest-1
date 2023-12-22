@@ -12,7 +12,7 @@ header {
     text-align: center;
     background-color: #d4dec3;
     width: 100%;
-    height: 35vh;
+    height: 37vh;
     position: relative;
 }
 
@@ -41,7 +41,7 @@ header {
 
 #search {
     height: 47px;
-    width: 542px;
+    width: 35vw;
     border: none;
 }
 
@@ -70,8 +70,8 @@ header {
     position: absolute;
     top: 18vh;
     left: 3vw;
-    width: 183px;
-    height: 149px;
+    width: 11vw;
+    height: 9vw;
     background-image: url(../img/spoon.png);
     background-size: cover;
 }
@@ -79,8 +79,8 @@ header {
     position: absolute;
     top: 14vh;
     left: 85vw;
-    width: 183px;
-    height: 200px;
+    width: 14vw;
+    height: 12vw;
     background-image: url(../img/fork.png);
     background-size: cover;
 }
@@ -90,10 +90,14 @@ header {
     top: 23vh;
     width: 70vw;
 }
+#about p{
+    font-size: 18px;
+}
+
 #middle{
     position: absolute;
     color: white;
-    left: 30vw;
+    left: 28vw;
     top:38vh ;}
 #special-container{
     border: 15px solid #b37f7f;
@@ -110,6 +114,7 @@ header {
     background-color: #b37f7f;
     box-shadow: 0 5px 10px rgba(78, 73, 73, 0.51), -5px 5px 10px rgba(34, 34, 34, 0.5);
     overflow-y: scroll;
+    z-index: 2;
 }
     
 #backdrop {
@@ -121,6 +126,7 @@ header {
     height: 100%;
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
     }
 .recipe-container{
     position: absolute;
@@ -162,6 +168,7 @@ header {
     width: 60vw;
     font-size: 20px;
     overflow-y: scroll;
+    z-index: 2;
 }
 .recipeName{
     padding: 15px 10px 10px 10px;
@@ -196,5 +203,204 @@ header {
     margin: 18px auto;
     background-color: rgb(220, 68, 68);
 
+}
+
+
+@media all and (max-width:600px){
+    header {
+        flex-direction: column;
+        width: 100%;}
+    #logo {
+            width: 103px;
+            height: 98px;
+            background-image: url(../img/logo.png);
+            background-size: cover;
+            cursor: pointer;
+        }
+        
+        #center-container {
+            display: flex;
+            position: absolute;
+            top: 14vh;
+            left: 30vw;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 10px; 
+        }
+        
+        #searchbox {
+            margin-top: 2px;
+            position: relative;
+        }
+        
+        #search {
+            height: 40px;
+            width: 35vw;
+            border: none;
+        }
+        
+        #search-button {
+            position: absolute;
+            background-color: #c13c3c;
+            border: none;
+            left: 28vw;
+            width: 60px;
+            height: 40px;
+            cursor: pointer;
+        }
+        #home{
+            position: absolute;
+            top: 5vh;
+            left: 75vw;
+        }
+        #home-button{
+            height: 40px;
+            width: 70px;
+            background-color: #c13c3c;
+            border: none;
+            cursor: pointer;
+        }
+        #spoon{
+            display: none;
+            position: absolute;
+            top: 18vh;
+            left: 3vw;
+            width: 183px;
+            height: 149px;
+            background-image: url(../img/spoon.png);
+            background-size: cover;
+        }
+        #fork{
+            display: none;
+            position: absolute;
+            top: 14vh;
+            left: 85vw;
+            width: 183px;
+            height: 200px;
+            background-image: url(../img/fork.png);
+            background-size: cover;
+        }
+        #about{
+            position: absolute;
+            left: 6vw;
+            top: 23vh;
+            width: 90vw;
+        }
+        #about p{
+            font-size: 12px;
+        }
+        #middle{
+            position: absolute;
+            color: white;
+            left: 25vw;
+            top:38vh ;
+            
+        }
+        #special-container{
+            border: 15px solid #b37f7f;
+            cursor: pointer;
+            box-shadow: 0 5px 10px rgba(78, 73, 73, 0.51), -5px 5px 10px rgba(34, 34, 34, 0.5);
+            
+        }
+        #myModal{
+            display:none;
+            position: absolute;
+            top: 10vh;
+            left: 18vw;
+            height: 80vh;
+            width: 60vw;
+            background-color: #b37f7f;
+            box-shadow: 0 5px 10px rgba(78, 73, 73, 0.51), -5px 5px 10px rgba(34, 34, 34, 0.5);
+            overflow-y: scroll;
+            z-index: 2;
+        }
+            
+        #backdrop {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+            }
+            .recipe-container{
+                position: absolute;
+                top: 90vh;
+                left: 5vw;
+                text-align: center;
+                display: grid;
+                grid-template-columns: repeat(1, minmax(300px,1fr));
+                grid-gap: 40px;
+                width: 80%;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                padding: 10px;
+                place-items: center;
+            }
+            .recipe{
+                background-color: #fff;
+                display: flex;
+                flex-direction: column;
+                border-radius: 6px;
+                box-shadow: 0 5px 10px rgba(78, 73, 73, 0.51), -5px 5px 10px rgba(34, 34, 34, 0.5);
+                cursor: pointer;
+                max-width: 300px;
+            }
+            
+            .recipe h3{
+                font-size: 24px;
+                margin-block: 5px;
+            }
+            
+            .recipe-details{display: none;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                -webkit-transform: translate(-50%,-50%);
+                background-color: #b37f7f;
+                height: 80vh;
+                width: 60vw;
+                font-size: 20px;
+                overflow-y: scroll;
+                z-index: 2;
+            }
+            .recipeName{
+                padding: 15px 10px 10px 10px;
+                font-size: 24px;
+                margin: 10px;
+            }
+            .ingredientsName{
+                padding: 5px 10px 10px 10px;
+                font-size: 20px;
+            }
+            .ingredientList{
+                padding: 5px 10px 10px 30px ;
+            
+            }
+            .instructionName{
+                font-size: 20px;
+                padding: 5px 10px 10px 10px;
+            
+            }
+            .recipeInstructions{
+                font-size: 18px;
+                padding: 10px 10px 10px 15px;
+            }
+            
+            .recipe button{
+                font-size: 18px;
+                font-weight: 500;
+                padding: 10px;
+                border-radius: 5px;
+                border: none;
+                cursor: pointer;
+                margin: 18px auto;
+                background-color: rgb(220, 68, 68);
+            
+    
 }
 
